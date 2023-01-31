@@ -1,4 +1,4 @@
-{% load static %}
+{% load static%}
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -7,9 +7,9 @@
 <meta http-equiv="cache-control" content="max-age=604800" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>GreatKart | One of the Biggest Online Shopping Platform</title>
+<title>CRUD Operations</title>
 
-<link href="{% static 'images/favicon.ico' %}" rel="shortcut icon" type="image/x-icon">
+<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
 <!-- jQuery -->
 <script src="{% static 'js/jquery-2.0.0.min.js' %}" type="text/javascript"></script>
@@ -28,9 +28,6 @@
 <!-- custom javascript -->
 <script src="{% static 'js/script.js' %}" type="text/javascript"></script>
 
-<!-- paypal -->
-<script src="https://www.paypal.com/sdk/js?client-id=AcfzS87d70Vjdhe6DPZjL_0aAokKiJn3YW3POINQ1KRsPdPNHX7BYYGsZtSeBLhvX4Mv6KUp3z6B8eDl&currency=USD"></script>
-
 <script type="text/javascript">
 /// some script
 
@@ -44,10 +41,38 @@ $(document).ready(function() {
 
 </head>
 <body>
-
-    {% include 'include/navbar.html' %}
-
-    {% block content %}
-    {% endblock %}
-
-  {% include 'include/footer.html' %}  
+    <header class="section-header">
+        
+        <section class="header-main border-bottom">
+            <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-3 col-md-3 col-6">
+              
+            </div>
+            <div class="col-lg-4 col-md-3 col-6">
+                <a href="./" class="brand-wrap">
+                    <img class="logo" src="{% static './images/logo.jpg' %}">
+                </a> <!-- brand-wrap.// -->
+            </div>
+            <div class="col-lg-4 col-sm-6 col-8 order-2 order-lg-3">
+                        <div class="d-flex justify-content-end mb-3 mb-lg-0">
+                            <div class="widget-header">
+                                <small class="title text-muted">Welcome guest!</small>
+                                <div> 
+                                    <a href="./signin.html">Sign in</a> <span class="dark-transp"> | </span>
+                                    <a href="./register.html"> Register</a>
+                                </div>
+                            </div>
+                        </div> <!-- widgets-wrap.// -->
+                    </div> <!-- col.// -->
+                
+                </div> <!-- row.// -->
+            </div> <!-- container.// -->
+        </section> <!-- header-main .// -->
+        
+        
+        
+        
+        </header> <!-- section-header.// -->
+        {% block content %}
+        {% endblock %}
